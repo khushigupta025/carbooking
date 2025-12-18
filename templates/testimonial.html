@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+    {% load static %}
+      {% block content %}
+
+      <!-- Our Testimonial section start -->
+    <section class="about">
+        <div class="inner">
+            <h2 class="about-us">Our Testimonial</h2>
+            <div>
+                <a href="index.html">Home /</a>
+                <span>Pages /</span>
+                <span>About</span>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- Our Testimonial section end -->
+      <!-- client review start -->
+    <section class="client-review">
+        <div class="review-top">
+            <h3 class="heading-review"> Our Clients <span>Riviews</span></h3>
+            <p class="heading-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+                exercitationem
+                sint aliquam quod aspernatur voluptas harum magni, ex neque tempore? Lorem ipsum dolor sit amet
+                consectetur
+                adipisicing elit. Quaerat, sed ullam! Modi, repellat. Maxime, tempora.</p>
+        </div>
+        <div class="review-bottom">
+            <div class="overlay">
+                <div class="person-card">
+                    <div class="card-top">
+                        <div class="girl-icon">
+                            <div class="girl-pic">
+                                <img src="{% static 'images/team-1.jpg' %}" alt="team-1">
+                            </div>
+                        </div>
+                        <div class="girl-detail">
+                            <h3>Person Name</h3>
+                            <p>Profession</p>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span class="star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+
+                        </div>
+                    </div>
+                    <div class="card-bottom">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi minus doloribus cumque, sunt
+                            quasi maiores enim reprehenderit minima quaerat expedita vel quis voluptate inventore
+                            recusandae.</p>
+                    </div>
+                </div>
+                <div class="person-card">
+                    <div class="card-top">
+                        <div class="girl-icon">
+                            <div class="girl-pic">
+                                <img src="{% static 'images/team-2.jpg' %}" alt="team-1">
+                            </div>
+                        </div>
+                        <div class="girl-detail">
+                            <h3>Person Name</h3>
+                            <p>Profession</p>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+
+                            <span class="star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+
+                        </div>
+                    </div>
+                    <div class="card-bottom">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi minus doloribus cumque, sunt
+                            quasi maiores enim reprehenderit minima quaerat expedita vel quis voluptate inventore
+                            recusandae.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- client review end -->
+
+       {% endblock %}
