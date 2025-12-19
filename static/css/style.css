@@ -117,8 +117,9 @@ a {
     font-size: 18px;
     text-decoration: none;
     color: var(--ternary-color);
-}  
-.navbar ul{
+}
+
+.navbar .nav-list {
     list-style: none;
     display: flex;
     justify-content: center;
@@ -128,7 +129,8 @@ a {
 
  .navbar ul li{
     position: relative;
-    background-color: var(--forth-color);
+    padding: 8px 8px;
+   
 }
  .navbar ul li:hover{
     color:var(--primary-color);
@@ -136,15 +138,17 @@ a {
 .navbar ul li ul{
     list-style: none;
     position: absolute;
-    /* left:10px;
-    top:35px; */
+    background-color: var(--forth-color);
+    border-radius: 10px;
+     top:35px;
+    left:-10px;
  }
 .navbar ul li ul li{
     display: none;
+    width:150px;
 }
 .navbar ul li:hover ul li{
     display: block;
-    
 }  
 .get {
     height: 50px;
@@ -239,6 +243,7 @@ a {
     width: 100%;
     border-radius: 10px;
     border: 2px solid var(--primary-color);
+
 }
 
 .form-location {
@@ -346,6 +351,7 @@ a {
     font-size: 17px;
     width: 60%;
     margin: auto;
+    color:var(--secondary-color);
     text-align: center;
 }
 
@@ -504,6 +510,7 @@ a {
 .cental-1 {
     height: 870px;
     width: 100%;
+    position: relative;
 }
 
 .cental-heading {
@@ -743,11 +750,23 @@ a {
 
 .about-img1::after {
     content: "";
-    right: 82px;
+    right: 0%;
     height: 520px;
     width: 7px;
     position: absolute;
     background-color: var(--primary-color);
+}
+.cental-1 .about-img2{
+    position: absolute;
+    bottom: 6%;
+    left:18%;
+    height:330px;
+    width:83%;
+}
+.cental-1 .about-img2 img{
+    width:100%;
+    height:100%;
+    border-radius: 10px;
 }
 .about3 {
     min-height: 350px;

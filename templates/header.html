@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css'%}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
@@ -54,31 +55,31 @@
                 </div>
                 <div class="navbar">
                     <nav>
-                        <ul>
-                            <a href="index.html">
+                        <ul class="nav-list">
+                            <a href="{% url 'home' %}">
                                 <li>Home</li>
                             </a>
-                            <a href="about.html">
+                            <a href="{% url 'about' %}">
                                 <li>About</li>
                             </a>
-                            <a href="service.html">
+                            <a href="{% url 'service' %}">
                                 <li>Service</li>
                             </a>
-                            <a href="blog.html">
+                            <a href="{% url 'blog' %}">
                                 <li>Blog</li>
                             </a>
-                            <a href="pages.html">
+                           
                                 <li>Pages
                                     <ul>
-                                        <a href="feature.html"><li>Our Feature</li></a>
-                                        <a href="cars.html"><li>Our Cars</li></a>
-                                        <a href="team.html"> <li>Our Team</li></a>
-                                        <a href="testimonial.html"><li>Testimonial</li></a>
-                                        <a href="page404 .html"><li>404 Page</li></a>
+                                        <a href="{% url 'feature' %}"><li>Our Feature</li></a>
+                                        <a href="{% url 'cars' %}"><li>Our Cars</li></a>
+                                        <a href="{% url 'team' %}"> <li>Our Team</li></a>
+                                        <a href="{% url 'testimonial' %}"><li>Testimonial</li></a>
+                                        <a href="{% url 'page404' %}"><li>404 Page</li></a>
                                     </ul>
                                 </li>
-                            </a>
-                            <a href="contact.html">
+                            
+                            <a href="{% url 'contact' %}">
                                 <li>Contact</li>
                             </a>
                         </ul>
