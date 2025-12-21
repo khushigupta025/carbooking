@@ -25,127 +25,54 @@
         </div>
         <div class="overlay">
             <div class="blog-bottom">
+                {% for b in blog_show %}
                 <div class="blog-rental">
                     <div class="blog-img">
-                        <img src="{% static 'images/car-22.jpg' %}" alt="car-22">
+                        <img src="{{ b.blog_image.url }}" alt="car-22">
                         <div class="dec30">
-                            <span>30 Dec 2025</span>
+                            <span>{{ b.blog_date }}</span>
                         </div>
                     </div>
                     <div class="blog-text">
                         <div class="martin">
-                            <p><span><i class="fa-solid fa-user"></i></span> Martin.C</p>
-                            <p><span><i class="fa-solid fa-message"> </i></span> 6 Comments</p>
+                            <p><span><i class="fa-solid fa-user"></i></span> {{ b.blog_authorname }}</p>
+                            <p><span><i class="fa-solid fa-message"> </i></span> {{ b.blog_comment }}</p>
                         </div>
-                        <h2 class="driving">Rental Cars how to check
-                            driving fines?
+                        <h2 class="driving">{{ b.blog_title }}
                         </h2>
-                        <p class="driving-para">To check driving fines, visit the official traffic website and enter the vehicle or driver details.
-                        Some rental companies also provide fine information through their app or customer support.</p>
-                        <h5 class="read-more">Read More
+                        <p class="driving-para">{{ b.blog_desc }}
                             <span><i class="fa-solid fa-arrow-right"></i></span>
                         </h5>
                     </div>
                 </div>
-                <div class="blog-rental">
-                    <div class="blog-img">
-                        <img src="{% static 'images/car-55.jpg' %}" alt="car-55">
-                        <div class="dec30">
-                            <span>25 Dec 2025</span>
-                        </div>
-                    </div>
-                    <div class="blog-text">
-                        <div class="martin">
-                            <p><span><i class="fa-solid fa-user"></i></span> Martin.C</p>
-                            <p><span><i class="fa-solid fa-message"> </i></span> 6 Comments</p>
-                        </div>
-                        <h2 class="driving"> Rental cost of sport and other
-                            cars
-                        </h2>
-                        <p class="driving-para">The rental cost of sports cars is usually higher due to their premium features and performance.
-                        Other cars offer more affordable rates, making them suitable for daily travel and budget-friendly trips.</p>
-                        <h5 class="read-more">Read More
-                            <span><i class="fa-solid fa-arrow-right"></i></span>
-                        </h5>
-                    </div>
-                </div>
-                <div class="blog-rental">
-                    <div class="blog-img">
-                        <img src="{% static 'images/car-44.jpg' %}" alt="car-44">
-                        <div class="dec30">
-                            <span>27 Dec 2025</span>
-                        </div>
-                    </div>
-                    <div class="blog-text">
-                        <div class="martin">
-                            <p><span><i class="fa-solid fa-user"></i></span> Martin.C</p>
-                            <p><span><i class="fa-solid fa-message"> </i></span> 6 Comments</p>
-                        </div>
-                        <h2 class="driving"> Document required for car rental
-                        </h2>
-                        <p class="driving-para">The basic documents required for car rental are a valid driver’s license and a government-issued ID.
-                        Some companies may also ask for address proof, passport, or credit/debit card for verification.</p>
-                        <h5 class="read-more">Read More
-                            <span><i class="fa-solid fa-arrow-right"></i></span>
-                        </h5>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </section>
     <!-- cental blog news section end -->
+      
       <!-- Numbering section start -->
     <section class="about3">
         <div class="about3-inner">
             <div class="overlay">
+                {% for n in num_show %}
                 <div class="about3-features">
                     <div class="about3-icon">
                         <div class="about3-icon1">
-                            <i class="fa-solid fa-thumbs-up"></i>
+                            <i class="{{ n.num_icon }}"></i>
                         </div>
                     </div>
                     <div class="about3-text">
-                        <h2 class="client">829+</h2>
-                        <h3 class="happy">Happy Client</h3>
+                        <h2 class="client">{{ n.num_counter }}</h2>
+                        <h3 class="happy">{{ n.num_title }}</h3>
                     </div>
                 </div>
-                <div class="about3-features">
-                    <div class="about3-icon">
-                        <div class="about3-icon1">
-                            <i class="fa-solid fa-car"></i>
-                        </div>
-                    </div>
-                    <div class="about3-text">
-                        <h2 class="client">56+</h2>
-                        <h3 class="happy">Numbers of Cars</h3>
-                    </div>
-                </div>
-                <div class="about3-features">
-                    <div class="about3-icon">
-                        <div class="about3-icon1">
-                            <i class="fa-solid fa-building"></i>
-                        </div>
-                    </div>
-                    <div class="about3-text">
-                        <h2 class="client">127+</h2>
-                        <h3 class="happy">Car Center</h3>
-                    </div>
-                </div>
-                <div class="about3-features">
-                    <div class="about3-icon">
-                        <div class="about3-icon1">
-                            <i class="fa-solid fa-clock"></i>
-                        </div>
-                    </div>
-                    <div class="about3-text">
-                        <h2 class="client">589+</h2>
-                        <h3 class="happy">Total kilometers</h3>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </section>
-     <!-- Numbering section start -->
+     <!-- Numbering section end -->
+
        <!-- contact and wp section start -->
     <section class="contact-car">
         <div class="overlay">

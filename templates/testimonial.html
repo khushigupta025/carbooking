@@ -15,7 +15,7 @@
         </div>
     </section>
     <!-- Our Testimonial section end -->
-    <!-- client review start -->
+     <!-- client review start -->
     <section class="client-review">
         <div class="review-top">
             <h3 class="heading-review"> Our Clients <span>Riviews</span></h3>
@@ -24,58 +24,33 @@
             first-class travel experience.</p>
         </div>
         <div class="review-bottom">
-            <div class="overlay">
+            <div class="overlay owl-carousel owl-theme " id="review">
+                {% for r in review_show %}
                 <div class="person-card">
                     <div class="card-top">
                         <div class="girl-icon">
                             <div class="girl-pic">
-                                <img src="{% static 'images/team-1.jpg' %}" alt="team-1">
+                                <img src="{{ r.review_image.url }}" alt="team-1">
                             </div>
                         </div>
                         <div class="girl-detail">
-                            <h3>Person Name</h3>
+                            <h3>{{ r.review_title}}</h3>
                             <p>Profession</p>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
+                            <i class="{{ r.review_icon }}"></i>
+                            <i class="{{ r.review_icon }}"></i>
+                            <i class="{{ r.review_icon }}"></i>
                             <span class="star">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
+                                <i class="{{ r.review_icon }}"></i>
+                                <i class="{{ r.review_icon }}"></i>
                             </span>
 
                         </div>
                     </div>
                     <div class="card-bottom">
-                        <p>The car is comfortable, well-maintained, and easy to drive.
-                            The performance is smooth, making every journey safe and enjoyable.</p>
+                        <p>{{ r.review_desc }}</p>
                     </div>
                 </div>
-                <div class="person-card">
-                    <div class="card-top">
-                        <div class="girl-icon">
-                            <div class="girl-pic">
-                                <img src="{% static 'images/team-2.jpg' %}" alt="team-1">
-                            </div>
-                        </div>
-                        <div class="girl-detail">
-                            <h3>Person Name</h3>
-                            <p>Profession</p>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-
-                            <span class="star">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </span>
-
-                        </div>
-                    </div>
-                    <div class="card-bottom">
-                        <p>The car provides a safe and comfortable ride for all passengers.
-                    Its features and performance make every trip enjoyable and hassle-free.</p>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </section>

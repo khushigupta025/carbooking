@@ -8,8 +8,8 @@
             <div class="overlay">
                 <div class="hero-main">
                     <div class="hero-content">
-                        <h1>Get 15% off your rental
-                            plan your trip now
+                        <h1>Get 15% off Your Rental
+                            Plan Your Trip Now
                         </h1>
                         <h5>Treat yourself in India</h5>
                     </div>
@@ -89,7 +89,7 @@
         </div>
     </section>
     <!-- hero section end -->
-    <!-- cental feature section start -->
+  <!-- cental feature section start -->
     <section class="cental-features">
         <div class="feature">
             <h2 class="feature-heading"><span>Booking </span>Feature</h2>
@@ -253,54 +253,23 @@
     <section class="about3">
         <div class="about3-inner">
             <div class="overlay">
+                {% for n in num_show %}
                 <div class="about3-features">
                     <div class="about3-icon">
                         <div class="about3-icon1">
-                            <i class="fa-solid fa-thumbs-up"></i>
+                            <i class="{{ n.num_icon }}"></i>
                         </div>
                     </div>
                     <div class="about3-text">
-                        <h2 class="client">829+</h2>
-                        <h3 class="happy">Happy Client</h3>
+                        <h2 class="client">{{ n.num_counter }}</h2>
+                        <h3 class="happy">{{ n.num_title }}</h3>
                     </div>
                 </div>
-                <div class="about3-features">
-                    <div class="about3-icon">
-                        <div class="about3-icon1">
-                            <i class="fa-solid fa-car"></i>
-                        </div>
-                    </div>
-                    <div class="about3-text">
-                        <h2 class="client">56+</h2>
-                        <h3 class="happy">Numbers of Cars</h3>
-                    </div>
-                </div>
-                <div class="about3-features">
-                    <div class="about3-icon">
-                        <div class="about3-icon1">
-                            <i class="fa-solid fa-building"></i>
-                        </div>
-                    </div>
-                    <div class="about3-text">
-                        <h2 class="client">127+</h2>
-                        <h3 class="happy">Car Center</h3>
-                    </div>
-                </div>
-                <div class="about3-features">
-                    <div class="about3-icon">
-                        <div class="about3-icon1">
-                            <i class="fa-solid fa-clock"></i>
-                        </div>
-                    </div>
-                    <div class="about3-text">
-                        <h2 class="client">589+</h2>
-                        <h3 class="happy">Total kilometers</h3>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </section>
-     <!-- Numbering section start -->
+     <!-- Numbering section end -->
 
     <!-- cental services section start -->
     <section class="cental-services">
@@ -311,229 +280,81 @@
         <div class="overlay">
             <div class="car-services">
                 <div class="car-services1">
+                    {% for s in service_show %}
                     <div class="car-s">
                         <div class="phone">
                             <div class="phone-icon">
-                                <i class="fa-solid fa-phone"></i>
+                                <i class="{{s.ser_icon}}"></i>
                             </div>
                         </div>
                         <div class="phone-text">
                             <h3 class="phone-heading">
-                                Phone Reservation
+                              {{s.ser_title}}
                             </h3>
                             <p class="phone-para">
-                                Phone Reservation makes booking easy and quick.
-                                Customers can reserve rides anytime with a simple call.
+                               {{s.ser_desc}}
                             </p>
                         </div>
                     </div>
-                    <div class="car-s">
-                        <div class="phone">
-                            <div class="phone-icon">
-                                <i class="fa-solid fa-rectangle-list"></i>
-                            </div>
-                        </div>
-                        <div class="phone-text">
-                            <h3 class="phone-heading">
-                                Special Rate
-                            </h3>
-                            <p class="phone-para">
-                               Special Rate gives customers affordable prices.
-                                It ensures great value for every ride.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="car-s">
-                        <div class="phone">
-                            <div class="phone-icon">
-                                <i class="fa-solid fa-road"></i>
-                            </div>
-                        </div>
-                        <div class="phone-text">
-                            <h3 class="phone-heading">
-                                On Way Rantel
-                            </h3>
-                            <p class="phone-para">
-                                One Way Rental allows customers to travel to their destination without returning the car to the starting point.
-                            </p>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
-                <div class="car-services2">
-                    <div class="car-s">
-                        <div class="phone">
-                            <div class="phone-icon">
-                                <i class="fa-solid fa-umbrella"></i>
-                            </div>
-                        </div>
-                        <div class="phone-text">
-                            <h3 class="phone-heading">
-                                Life Insurance
-                            </h3>
-                            <p class="phone-para">
-                               Life Insurance ensures financial protection and peace of mind for customers and their families.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="car-s">
-                        <div class="phone">
-                            <div class="phone-icon">
-                                <i class="fa-solid fa-building"></i>
-                            </div>
-                        </div>
-                        <div class="phone-text">
-                            <h3 class="phone-heading">
-                                City to City
-                            </h3>
-                            <p class="phone-para">
-                                City to City service allows customers to travel conveniently between different cities.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="car-s">
-                        <div class="phone">
-                            <div class="phone-icon">
-                                <i class="fa-solid fa-car"></i>
-                            </div>
-                        </div>
-                        <div class="phone-text">
-                            <h3 class="phone-heading">
-                                Free Rides
-                            </h3>
-                            <p class="phone-para">
-                                Free Rides offer customers complimentary trips on selected routes or occasions.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+               
             </div>
         </div>
     </section>
     <!-- cental services section end -->
-
-    <!-- Vechicle categories section start -->
-    <section class="vechile-categories">
-        <div class="vechicle-top">
-            <h2 class="vechile-heading">
-                <span>Vehicle</span>
-                Categories
-            </h2>
-            <p class="vechicle-para">
-                The vehicle categories let customers choose cars based on comfort and size.
-                the options also suit different budgets and preferences.the choices ensure comfort, style, and affordability for all customers.
-            </p>
+<!-- vehicle categories start-->
+    <section class="vehicle-categories">
+        <div class="vehicle-top">
+            <h3 class="topic-vehicle">Vehicle<span> Categories</span></h3>
+            <p class="vehicle-para">In a car centre, vehicle categories help organize the types of vehicles they
+                service, rent, or sell based on size, purpose, and features.Luxury cars
+                provide premium features and superior comfort, while electric vehicles require specialized servicing for
+                their battery systems.</p>
         </div>
-        <div class="overlay">
-            <div class="vechicle-bottom owl-carousel owl-theme" id="vehicle">
-                <div class="car-model item">
-                    <div class="car-box">
-                        <div class="car-image">
-                            <img src="{% static 'images/car-4.png' %}" alt="car-4">
+        <div class="vehicle-bottom">
+            <div class="overlay owl-carousel owl-theme" id="vehicle">
+                {% for c in cat_show  %}
+                <div class="vehicle-box">
+                    <div class="vehicle-inner">
+                        <div class="vehicle-car">
+                            <img src="{{ c.cat_image.url }}" alt="car-4">
                         </div>
-                        <div class="car-price">
-                            <h3 class="car-name">Hyundai Kona Electric</h3>
-                            <p class="car-rating">4.8 Review
-                                <span>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </span>
-                            </p>
-                            <div class="car-day">
-                                <span>$187:00/Day</span>
-                            </div>
-                            <div class="icon-text">
-                                <p><i class="fa-solid fa-users"></i> 4 Seat</p>
-                                <p><i class="fa-solid fa-car"></i> AT/MT</p>
-                                <p><i class="fa-solid fa-gas-pump"></i>Petrol</p>
-                            </div>
-                            <div class="icon-text1">
-                                <p><i class="fa-solid fa-car"></i></i> 2015</p>
-                                <p><i class="fa-solid fa-gears"></i> AUTO</p>
-                                <p><i class="fa-solid fa-road"></i> 27K</p>
-                            </div>
-                            <div class="vehicle-book">
-                                <span>Book Now</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="car-model">
-                    <div class="car-box">
-                        <div class="car-image">
-                            <img src="{% static 'images/car-1.png' %}" alt="car-1">
-                        </div>
-                        <div class="car-price">
-                            <h3 class="car-name">Mercedes Benz R3</h3>
-                            <p class="car-rating">4.5 Review
-                                <span>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </span>
+                        <div class="vehicle-topic">
+                            <h4 class="hyundai">{{ c.cat_title }}</h4>
+                            <p class="review">4.8 Review
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                             </p>
-                            <div class="car-day">
-                                <span>$99:00/Day</span>
+                            <div class="price-box">
+                                <span>{{ c.cat_rate }}</span>
                             </div>
-                            <div class="icon-text">
-                                <p><i class="fa-solid fa-users"></i> 4 Seat</p>
-                                <p><i class="fa-solid fa-car"></i> AT/MT</p>
-                                <p><i class="fa-solid fa-gas-pump"></i>Petrol</p>
+                            <div class="icon-txt">
+                                <P><i class="fa-solid fa-users"></i>4Seat</P>
+                                <P><i class="fa-solid fa-car"></i>AT/MT</P>
+                                <P><i class="fa-solid fa-gas-pump"></i>Petrol</P>
                             </div>
-                            <div class="icon-text1">
-                                <p><i class="fa-solid fa-car"></i></i> 2015</p>
-                                <p><i class="fa-solid fa-gears"></i> AUTO</p>
-                                <p><i class="fa-solid fa-road"></i> 27K</p>
+                            <div class="icon-txt1">
+                                <P><i class="fa-solid fa-car"></i>2015</P>
+                                <P><i class="fa-solid fa-gears"></i>AUTO</P>
+                                <P><i class="fa-solid fa-road"></i>27K</P>
                             </div>
-                            <div class="vehicle-book">
-                                <span>Book Now</span>
+
+                            <div class="booking-now">
+                                <a href="#">Book Now</a>
                             </div>
+
                         </div>
                     </div>
                 </div>
-                <div class="car-model">
-                    <div class="car-box">
-                        <div class="car-image">
-                            <img src="{% static 'images/car-2.png' %}" alt="car-2">
-                        </div>
-                        <div class="car-price">
-                            <h3 class="car-name">Toyota Corolla Cross</h3>
-                            <p class="car-rating">4.8 Review
-                                <span>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </span>
-                            </p>
-                            <div class="car-day">
-                                <span>$128:00/Day</span>
-                            </div>
-                            <div class="icon-text">
-                                <p><i class="fa-solid fa-users"></i> 4 Seat</p>
-                                <p><i class="fa-solid fa-car"></i> AT/MT</p>
-                                <p><i class="fa-solid fa-gas-pump"></i>Petrol</p>
-                            </div>
-                            <div class="icon-text1">
-                                <p><i class="fa-solid fa-car"></i></i> 2015</p>
-                                <p><i class="fa-solid fa-gears"></i> AUTO</p>
-                                <p><i class="fa-solid fa-road"></i> 27K</p>
-                            </div>
-                            <div class="vehicle-book">
-                                <span>Book Now</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+               {% endfor %}
             </div>
         </div>
     </section>
-    <!-- Vechicle categories section end -->
+    <!-- vehicle categories end-->
 
     <!-- cental process start -->
     <section class="cental-process">
@@ -544,34 +365,17 @@
             </div>
             <div class="overlay">
                 <div class="process-information">
+                    {% for p in pro_show %}
                     <div class="process-contact">
                         <h2 class="inform-h1">
-                            Come in Conatact
+                            {{ p.pro_title }}
                         </h2>
                         <p class="inform-para">
-                           Come in contact with us anytime for support.
-                            We are always ready to assist our customers.
+                           {{ p.pro_desc }}
                         </p>
-                        <div class="about3-gola"><span>01.</span></div>
+                        <div class="about3-gola"><span> {{ p.pro_number }}</span></div>
                     </div>
-                    <div class="process-contact">
-                        <h2 class="inform-h1">
-                            Choose A Car
-                        </h2>
-                        <p class="inform-para">
-                            Choose a car that fits your comfort, style, and budget for a perfect journey
-                        </p>
-                        <div class="about3-gola"><span>02.</span></div>
-                    </div>
-                    <div class="process-contact">
-                        <h2 class="inform-h1">
-                            Enjoy Driving
-                        </h2>
-                        <p class="inform-para">
-                            Enjoy driving with comfort and ease in every ride.
-                        </p>
-                        <div class="about3-gola"><span>03.</span></div>
-                    </div>
+                    {% endfor %}
                 </div>
 
             </div>
@@ -589,71 +393,27 @@
         </div>
         <div class="overlay">
             <div class="blog-bottom">
+                {% for b in blog_show %}
                 <div class="blog-rental">
                     <div class="blog-img">
-                        <img src="{% static 'images/car-22.jpg' %}" alt="car-22">
+                        <img src="{{ b.blog_image }}" alt="car-22">
                         <div class="dec30">
-                            <span>30 Dec 2025</span>
+                            <span>{{ b.blog_date }}</span>
                         </div>
                     </div>
                     <div class="blog-text">
                         <div class="martin">
-                            <p><span><i class="fa-solid fa-user"></i></span> Martin.C</p>
-                            <p><span><i class="fa-solid fa-message"> </i></span> 6 Comments</p>
+                            <p><span><i class="fa-solid fa-user"></i></span> {{ b.blog_authorname }}</p>
+                            <p><span><i class="fa-solid fa-message"> </i></span> {{ b.blog_comment }}</p>
                         </div>
-                        <h2 class="driving">Rental Cars how to check
-                            driving fines?
+                        <h2 class="driving">{{ b.blog_title }}
                         </h2>
-                        <p class="driving-para">To check driving fines, visit the official traffic website and enter the vehicle or driver details.
-                        Some rental companies also provide fine information through their app or customer support.</p>
-                        <h5 class="read-more">Read More
+                        <p class="driving-para">{{ b.blog_desc }}
                             <span><i class="fa-solid fa-arrow-right"></i></span>
                         </h5>
                     </div>
                 </div>
-                <div class="blog-rental">
-                    <div class="blog-img">
-                        <img src="{% static 'images/car-55.jpg' %}" alt="car-55">
-                        <div class="dec30">
-                            <span>25 Dec 2025</span>
-                        </div>
-                    </div>
-                    <div class="blog-text">
-                        <div class="martin">
-                            <p><span><i class="fa-solid fa-user"></i></span> Martin.C</p>
-                            <p><span><i class="fa-solid fa-message"> </i></span> 6 Comments</p>
-                        </div>
-                        <h2 class="driving"> Rental cost of sport and other
-                            cars
-                        </h2>
-                        <p class="driving-para">The rental cost of sports cars is usually higher due to their premium features and performance.
-                        Other cars offer more affordable rates, making them suitable for daily travel and budget-friendly trips.</p>
-                        <h5 class="read-more">Read More
-                            <span><i class="fa-solid fa-arrow-right"></i></span>
-                        </h5>
-                    </div>
-                </div>
-                <div class="blog-rental">
-                    <div class="blog-img">
-                        <img src="{% static 'images/car-44.jpg' %}" alt="car-44">
-                        <div class="dec30">
-                            <span>27 Dec 2025</span>
-                        </div>
-                    </div>
-                    <div class="blog-text">
-                        <div class="martin">
-                            <p><span><i class="fa-solid fa-user"></i></span> Martin.C</p>
-                            <p><span><i class="fa-solid fa-message"> </i></span> 6 Comments</p>
-                        </div>
-                        <h2 class="driving"> Document required for car rental
-                        </h2>
-                        <p class="driving-para">The basic documents required for car rental are a valid driver’s license and a government-issued ID.
-                        Some companies may also ask for address proof, passport, or credit/debit card for verification.</p>
-                        <h5 class="read-more">Read More
-                            <span><i class="fa-solid fa-arrow-right"></i></span>
-                        </h5>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </section>
@@ -767,8 +527,6 @@
 
         <!-- customer support center end-->
 
-
-
     <!-- client review start -->
     <section class="client-review">
         <div class="review-top">
@@ -778,58 +536,33 @@
             first-class travel experience.</p>
         </div>
         <div class="review-bottom">
-            <div class="overlay">
+            <div class="overlay owl-carousel owl-theme " id="review">
+                {% for r in review_show %}
                 <div class="person-card">
                     <div class="card-top">
                         <div class="girl-icon">
                             <div class="girl-pic">
-                                <img src="{% static 'images/team-1.jpg' %}" alt="team-1">
+                                <img src="{{ r.review_image.url }}" alt="team-1">
                             </div>
                         </div>
                         <div class="girl-detail">
-                            <h3>Person Name</h3>
+                            <h3>{{ r.review_title}}</h3>
                             <p>Profession</p>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
+                            <i class="{{ r.review_icon }}"></i>
+                            <i class="{{ r.review_icon }}"></i>
+                            <i class="{{ r.review_icon }}"></i>
                             <span class="star">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
+                                <i class="{{ r.review_icon }}"></i>
+                                <i class="{{ r.review_icon }}"></i>
                             </span>
 
                         </div>
                     </div>
                     <div class="card-bottom">
-                        <p>The car is comfortable, well-maintained, and easy to drive.
-                            The performance is smooth, making every journey safe and enjoyable.</p>
+                        <p>{{ r.review_desc }}</p>
                     </div>
                 </div>
-                <div class="person-card">
-                    <div class="card-top">
-                        <div class="girl-icon">
-                            <div class="girl-pic">
-                                <img src="{% static 'images/team-2.jpg' %}" alt="team-1">
-                            </div>
-                        </div>
-                        <div class="girl-detail">
-                            <h3>Person Name</h3>
-                            <p>Profession</p>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-
-                            <span class="star">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </span>
-
-                        </div>
-                    </div>
-                    <div class="card-bottom">
-                        <p>The car provides a safe and comfortable ride for all passengers.
-                    Its features and performance make every trip enjoyable and hassle-free.</p>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </section>

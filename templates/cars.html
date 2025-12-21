@@ -15,131 +15,60 @@
         </div>
     </section>
     <!-- our cars section end -->
-     <!-- Vechicle categories section start -->
-    <section class="vechile-categories">
-        <div class="vechicle-top">
-            <h2 class="vechile-heading">
-                <span>Vehicle</span>
-                Categories
-            </h2>
-            <p class="vechicle-para">
-                The vehicle categories let customers choose cars based on comfort and size.
-                the options also suit different budgets and preferences.the choices ensure comfort, style, and affordability for all customers.
-            </p>
+    <!-- vehicle categories start-->
+    <section class="vehicle-categories">
+        <div class="vehicle-top">
+            <h3 class="topic-vehicle">Vehicle<span> Categories</span></h3>
+            <p class="vehicle-para">In a car centre, vehicle categories help organize the types of vehicles they
+                service, rent, or sell based on size, purpose, and features.Luxury cars
+                provide premium features and superior comfort, while electric vehicles require specialized servicing for
+                their battery systems.</p>
         </div>
-        <div class="overlay">
-            <div class="vechicle-bottom owl-carousel owl-theme" id="vehicle">
-                <div class="car-model item">
-                    <div class="car-box">
-                        <div class="car-image">
-                            <img src="{% static 'images/car-4.png' %}" alt="car-4">
+        <div class="vehicle-bottom">
+            <div class="overlay owl-carousel owl-theme" id="vehicle">
+                {% for c in cat_show  %}
+                <div class="vehicle-box">
+                    <div class="vehicle-inner">
+                        <div class="vehicle-car">
+                            <img src="{{ c.cat_image.url }}" alt="car-4">
                         </div>
-                        <div class="car-price">
-                            <h3 class="car-name">Hyundai Kona Electric</h3>
-                            <p class="car-rating">4.8 Review
-                                <span>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </span>
-                            </p>
-                            <div class="car-day">
-                                <span>$187:00/Day</span>
-                            </div>
-                            <div class="icon-text">
-                                <p><i class="fa-solid fa-users"></i> 4 Seat</p>
-                                <p><i class="fa-solid fa-car"></i> AT/MT</p>
-                                <p><i class="fa-solid fa-gas-pump"></i>Petrol</p>
-                            </div>
-                            <div class="icon-text1">
-                                <p><i class="fa-solid fa-car"></i></i> 2015</p>
-                                <p><i class="fa-solid fa-gears"></i> AUTO</p>
-                                <p><i class="fa-solid fa-road"></i> 27K</p>
-                            </div>
-                            <div class="vehicle-book">
-                                <span>Book Now</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="car-model">
-                    <div class="car-box">
-                        <div class="car-image">
-                            <img src="{% static 'images/car-1.png' %}" alt="car-1">
-                        </div>
-                        <div class="car-price">
-                            <h3 class="car-name">Mercedes Benz R3</h3>
-                            <p class="car-rating">4.5 Review
-                                <span>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </span>
+                        <div class="vehicle-topic">
+                            <h4 class="hyundai">{{ c.cat_title }}</h4>
+                            <p class="review">4.8 Review
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                             </p>
-                            <div class="car-day">
-                                <span>$99:00/Day</span>
+                            <div class="price-box">
+                                <span>{{ c.cat_rate }}</span>
                             </div>
-                            <div class="icon-text">
-                                <p><i class="fa-solid fa-users"></i> 4 Seat</p>
-                                <p><i class="fa-solid fa-car"></i> AT/MT</p>
-                                <p><i class="fa-solid fa-gas-pump"></i>Petrol</p>
+                            <div class="icon-txt">
+                                <P><i class="fa-solid fa-users"></i>4Seat</P>
+                                <P><i class="fa-solid fa-car"></i>AT/MT</P>
+                                <P><i class="fa-solid fa-gas-pump"></i>Petrol</P>
                             </div>
-                            <div class="icon-text1">
-                                <p><i class="fa-solid fa-car"></i></i> 2015</p>
-                                <p><i class="fa-solid fa-gears"></i> AUTO</p>
-                                <p><i class="fa-solid fa-road"></i> 27K</p>
+                            <div class="icon-txt1">
+                                <P><i class="fa-solid fa-car"></i>2015</P>
+                                <P><i class="fa-solid fa-gears"></i>AUTO</P>
+                                <P><i class="fa-solid fa-road"></i>27K</P>
                             </div>
-                            <div class="vehicle-book">
-                                <span>Book Now</span>
+
+                            <div class="booking-now">
+                                <a href="#">Book Now</a>
                             </div>
+
                         </div>
                     </div>
                 </div>
-                <div class="car-model">
-                    <div class="car-box">
-                        <div class="car-image">
-                            <img src="{% static 'images/car-2.png' %}" alt="car-2">
-                        </div>
-                        <div class="car-price">
-                            <h3 class="car-name">Toyota Corolla Cross</h3>
-                            <p class="car-rating">4.8 Review
-                                <span>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </span>
-                            </p>
-                            <div class="car-day">
-                                <span>$128:00/Day</span>
-                            </div>
-                            <div class="icon-text">
-                                <p><i class="fa-solid fa-users"></i> 4 Seat</p>
-                                <p><i class="fa-solid fa-car"></i> AT/MT</p>
-                                <p><i class="fa-solid fa-gas-pump"></i>Petrol</p>
-                            </div>
-                            <div class="icon-text1">
-                                <p><i class="fa-solid fa-car"></i></i> 2015</p>
-                                <p><i class="fa-solid fa-gears"></i> AUTO</p>
-                                <p><i class="fa-solid fa-road"></i> 27K</p>
-                            </div>
-                            <div class="vehicle-book">
-                                <span>Book Now</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+               {% endfor %}
             </div>
         </div>
     </section>
-    <!-- Vechicle categories section end -->
+    <!-- vehicle categories end-->
 
- <!-- cental process start -->
+    <!-- cental process start -->
     <section class="cental-process">
         <div class="process-inner">
             <div class="process-heading">
@@ -148,39 +77,23 @@
             </div>
             <div class="overlay">
                 <div class="process-information">
+                    {% for p in pro_show %}
                     <div class="process-contact">
                         <h2 class="inform-h1">
-                            Come in Conatact
+                            {{ p.pro_title }}
                         </h2>
                         <p class="inform-para">
-                           Come in contact with us anytime for support.
-                            We are always ready to assist our customers.
+                           {{ p.pro_desc }}
                         </p>
-                        <div class="about3-gola"><span>01.</span></div>
+                        <div class="about3-gola"><span> {{ p.pro_number }}</span></div>
                     </div>
-                    <div class="process-contact">
-                        <h2 class="inform-h1">
-                            Choose A Car
-                        </h2>
-                        <p class="inform-para">
-                            Choose a car that fits your comfort, style, and budget for a perfect journey
-                        </p>
-                        <div class="about3-gola"><span>02.</span></div>
-                    </div>
-                    <div class="process-contact">
-                        <h2 class="inform-h1">
-                            Enjoy Driving
-                        </h2>
-                        <p class="inform-para">
-                            Enjoy driving with comfort and ease in every ride.
-                        </p>
-                        <div class="about3-gola"><span>03.</span></div>
-                    </div>
+                    {% endfor %}
                 </div>
 
             </div>
     </section>
     <!-- cental process end-->
+
 <!-- contact and wp section start -->
     <section class="contact-car">
         <div class="overlay">

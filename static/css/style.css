@@ -22,7 +22,7 @@ a {
      position: sticky;
     top: 0px;
     left: 0px;
-    z-index: 1;
+    z-index: 10;
 }
 .top-header {
     height: 50px;
@@ -77,8 +77,6 @@ a {
     color: var(--secondary-color);
     font-size: 18px;
     line-height: 45px; 
-
-    
 }
 
 .location a i {
@@ -202,8 +200,9 @@ a {
 
 .hero-content h1 {
     color: var(--forth-color);
-    font-size: 50px;
+    font-size: 55px;
     padding-top: 40px;
+    font-weight: bold;
 }
 
 .hero-content h5 {
@@ -951,20 +950,20 @@ a {
 /*about section end */
 /* cental services section start */
 .cental-services {
-    min-height: 880px;
+    min-height: 400px;
     width: 100%;
     background-color: rgb(241, 239, 239);
+    padding: 60px 0px;
 }
 
 .services-heading {
-    height: 200px;
+    min-height: 100px;
     width: 100%;
     text-align: center;
 }
 
 .services-hd {
     font-size: 50px;
-    padding-top: 90px;
 }
 
 .services-hd span {
@@ -975,20 +974,24 @@ a {
     font-size: 17px;
     line-height: 15px;
     width: 80%;
-    padding: 15px;
+    padding: 20px 0px ;
     padding-left: 20%;
 }
 
 .car-services {
-    height: 600px;
+    min-height: 300px;
     width: 100%;
 }
 
 .car-services1 {
-    height: 300px;
+    min-height: 300px;
     width: 100%;
     display: flex;
     padding-top: 10px;
+    gap:30px 0px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: space-evenly;
     justify-content: space-between;
 }
 
@@ -999,13 +1002,6 @@ a {
     background-color: var(--forth-color);
 }
 
-.car-services2 {
-    height: 300px;
-    width: 100%;
-    display: flex;
-    padding-top: 15px;
-    justify-content: space-between;
-}
 
 .phone {
     height: 130px;
@@ -1025,7 +1021,7 @@ a {
     animation-timing-function: ease-out;
     animation-iteration-count: infinite;
     animation-direction: alternate-reverse;
-}
+} 
 
 @keyframes circle {
     0% {
@@ -1083,179 +1079,174 @@ a {
 
 /* cental services section end */
 
-/* vechile section start */
-.vechile-categories {
-    min-height: 900px;
+/* vehicle categories start */
+.vehicle-categories {
+    min-height: 700px;
     width: 100%;
-    background-color: rgb(241, 239, 239);
+    padding: 30px;
 }
 
-.vechicle-top {
-    height: 250px;
+.vehicle-top {
+    min-height: 230px;
     width: 100%;
     text-align: center;
+
 }
 
-.vechile-heading {
+.topic-vehicle {
+    color: var(--fifth-color);
     font-size: 50px;
-    padding-top: 80px;
+    padding-top: 60px;
+    padding-bottom: 5px;
 }
 
-.vechile-heading span {
+.topic-vehicle span {
     color: var(--primary-color);
+    font-size: 50px;
 }
 
-.vechicle-para {
-    font-size: 17px;
-    line-height: 21px;
-    width: 80%;
-    padding-top: 5px;
-    padding-left: 20%;
+.vehicle-para {
+    width: 65%;
+    margin: auto;
+    line-height: 23px;
 }
 
-.vechicle-bottom {
+.vehicle-bottom {
     min-height: 600px;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
 }
 
-.car-model {
+.vehicle-box {
     height: 600px;
-    width: 32%;
-    padding-top: 15px;
+    background-color: white;
     border-radius: 10px;
-    border: 2px solid black;
+    padding-top: 22px;
+    border: 1px solid black;
+    width:98%;
 }
 
-.car-box {
-    height: 565px;
+.vehicle-inner {
+    height: 550px;
     width: 90%;
+    background-color: rgb(239, 239, 239);
     margin: auto;
-    padding-top: 6px;
-    border-radius: 10px;
 }
-
-.car-box:hover {
-    box-shadow: 0px 0px 15px var(--primary-color);
+.vehicle-inner:hover{
+    box-shadow: 0px 0px 8px var(--primary-color);
 }
-
-.car-image {
-    height: 230px;
+.vehicle-car {
+    height: 200px;
+    background-color: rgb(239, 239, 239);
     width: 100%;
-    margin: auto;
-    background-color: rgb(231, 228, 228);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    padding: 10px 0px;
 }
 
-.car-image img {
-    height: 210px;
-    width: 100%;
+.vehicle-car img {
     object-fit: cover;
+    align-items: center;
+    height: 200px;
+    width: 90%;
 }
 
-.car-price {
-    height: 330px;
+.vehicle-topic {
+    height: 350px;
     width: 100%;
-    margin: auto;
-    background-color: rgb(224, 221, 221);
-    padding-top: 5px;
-    text-align: center;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    background-color: rgb(239, 239, 239);
+    padding-top: 7px;
 }
 
-.car-name {
+.hyundai {
+    text-align: center;
     font-size: 25px;
-    word-spacing: 4px;
-    padding-top: 20px;
+    padding: 5px 0px;
 }
 
-.car-rating {
-    color: var(--secondary-color);
-    padding-top: 8px;
-    padding-bottom: 20px;
-}
-
-.car-rating span {
-    color: var(--fifth-color);
-    padding-left: 15px;
-}
-
-.car-day {
-    height: 50px;
-    width: 85%;
-    border-radius: 25px;
-    margin: auto;
-    background-color: var(--forth-color);
+.review {
+    color: rgb(88, 87, 87);
     text-align: center;
+    padding-bottom: 15px;
+
 }
 
-.car-day span {
+.review i {
+    color: var(--fifth-color);
+}
+
+.price-box {
+    height: 45px;
+    width: 85%;
+    background-color: var(--forth-color);
+    margin: auto;
+    border-radius: 25px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.price-box span {
     color: var(--primary-color);
     font-size: 25px;
-    line-height: 50px;
 }
 
-.icon-text {
-    height: 30px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 22px;
-    padding-top: 35px;
-}
-
-.icon-text i {
-    font-size: 15px;
-    color: var(--ternary-color);
-}
-
-.icon-text p {
-    color: var(--secondary-color);
-    padding-left: 18px;
-}
-
-.icon-text1 {
-    height: 30px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    padding-top: 30px;
-    padding-bottom: 50px;
-}
-
-.icon-text1 i {
-    font-size: 15px;
-    color: var(--ternary-color);
-}
-
-.icon-text1 p {
-    color: var(--secondary-color);
-    padding-left: 18px;
-}
-
-.vehicle-book {
+.icon-txt {
     height: 50px;
+    width: 100%;
+    padding-top: 20px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.icon-txt i {
+    color: var(--fifth-color);
+    font-size: 18px;
+}
+
+.icon-txt p {
+    color: var(--secondary-color);
+
+    padding-left: 10px;
+}
+
+.icon-txt1 {
+    height: 50px;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 55px;
+    display: flex;
+    gap: 22px;
+    justify-content: center;
+}
+
+.icon-txt1 i {
+    color: var(--fifth-color);
+    font-size: 18px;
+}
+
+.icon-txt1 p {
+    color: var(--secondary-color);
+
+    padding-left: 10px;
+}
+
+.booking-now {
+    background-color: var(--primary-color);
+    margin: auto;
+    height: 55px;
     width: 85%;
     border-radius: 25px;
-    margin: auto;
-    background-color: var(--primary-color);
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.vehicle-book span {
-    font-size: 18px;
-    font-weight: bold;
-    color: var(--forth-color);
-    line-height: 50px;
+.booking-now a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 22px;
+
 }
 
-/* vechile section start */
-
+/* vehicle categories end */
 /* cebtal blog news section start */
 .cental-blog {
     min-height: 880px;
@@ -1734,8 +1725,7 @@ a {
 
 .person-card {
     height: 250px;
-    width: 48%;
-
+    width:95%;
     border: 1px solid black;
     border-radius: 10px;
 }
@@ -1937,6 +1927,7 @@ a {
     border-radius: 40px;
     background: var(--fifth-color);
     border: 0px;
+    color:white;
 }
 
 .links {

@@ -92,57 +92,28 @@
         </div>
     </section>
         <!-- cental about end -->
+   <!-- Numbering section start -->
     <section class="about3">
         <div class="about3-inner">
             <div class="overlay">
+                {% for n in num_show %}
                 <div class="about3-features">
                     <div class="about3-icon">
                         <div class="about3-icon1">
-                            <i class="fa-solid fa-thumbs-up"></i>
+                            <i class="{{ n.num_icon }}"></i>
                         </div>
                     </div>
                     <div class="about3-text">
-                        <h2 class="client">829+</h2>
-                        <h3 class="happy">Happy Client</h3>
+                        <h2 class="client">{{ n.num_counter }}</h2>
+                        <h3 class="happy">{{ n.num_title }}</h3>
                     </div>
                 </div>
-                <div class="about3-features">
-                    <div class="about3-icon">
-                        <div class="about3-icon1">
-                            <i class="fa-solid fa-car"></i>
-                        </div>
-                    </div>
-                    <div class="about3-text">
-                        <h2 class="client">56+</h2>
-                        <h3 class="happy">Numbers of Cars</h3>
-                    </div>
-                </div>
-                <div class="about3-features">
-                    <div class="about3-icon">
-                        <div class="about3-icon1">
-                            <i class="fa-solid fa-building"></i>
-                        </div>
-                    </div>
-                    <div class="about3-text">
-                        <h2 class="client">127+</h2>
-                        <h3 class="happy">Car Center</h3>
-                    </div>
-                </div>
-                <div class="about3-features">
-                    <div class="about3-icon">
-                        <div class="about3-icon1">
-                            <i class="fa-solid fa-clock"></i>
-                        </div>
-                    </div>
-                    <div class="about3-text">
-                        <h2 class="client">589+</h2>
-                        <h3 class="happy">Total kilometers</h3>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </section>
-    <!-- cental about end -->
+     <!-- Numbering section end -->
+
     <!-- cental feature section start -->
     <section class="cental-features">
         <div class="feature">
@@ -234,39 +205,22 @@
             </div>
             <div class="overlay">
                 <div class="process-information">
+                    {% for p in pro_show %}
                     <div class="process-contact">
                         <h2 class="inform-h1">
-                            Come in Conatact
+                            {{ p.pro_title }}
                         </h2>
                         <p class="inform-para">
-                           Come in contact with us anytime for support.
-                            We are always ready to assist our customers.
+                           {{ p.pro_desc }}
                         </p>
-                        <div class="about3-gola"><span>01.</span></div>
+                        <div class="about3-gola"><span> {{ p.pro_number }}</span></div>
                     </div>
-                    <div class="process-contact">
-                        <h2 class="inform-h1">
-                            Choose A Car
-                        </h2>
-                        <p class="inform-para">
-                            Choose a car that fits your comfort, style, and budget for a perfect journey
-                        </p>
-                        <div class="about3-gola"><span>02.</span></div>
-                    </div>
-                    <div class="process-contact">
-                        <h2 class="inform-h1">
-                            Enjoy Driving
-                        </h2>
-                        <p class="inform-para">
-                            Enjoy driving with comfort and ease in every ride.
-                        </p>
-                        <div class="about3-gola"><span>03.</span></div>
-                    </div>
+                    {% endfor %}
                 </div>
 
             </div>
     </section>
-    <!-- cental process start -->
+    <!-- cental process end-->
     <!-- customer support center  start-->
         <section class="customer-support">
             <div class="customer-top">

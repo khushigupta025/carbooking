@@ -17,7 +17,7 @@
     </section>
     <!-- cental about start -->
 
-     <!-- cental services section start -->
+    <!-- cental services section start -->
     <section class="cental-services">
         <div class="services-heading">
             <h2 class="services-hd"><span>Cental</span> Services</h2>
@@ -26,160 +26,51 @@
         <div class="overlay">
             <div class="car-services">
                 <div class="car-services1">
+                    {% for s in service_show %}
                     <div class="car-s">
                         <div class="phone">
                             <div class="phone-icon">
-                                <i class="fa-solid fa-phone"></i>
+                                <i class="{{s.ser_icon}}"></i>
                             </div>
                         </div>
                         <div class="phone-text">
                             <h3 class="phone-heading">
-                                Phone Reservation
+                              {{s.ser_title}}
                             </h3>
                             <p class="phone-para">
-                                Phone Reservation makes booking easy and quick.
-                                Customers can reserve rides anytime with a simple call.
+                               {{s.ser_desc}}
                             </p>
                         </div>
                     </div>
-                    <div class="car-s">
-                        <div class="phone">
-                            <div class="phone-icon">
-                                <i class="fa-solid fa-rectangle-list"></i>
-                            </div>
-                        </div>
-                        <div class="phone-text">
-                            <h3 class="phone-heading">
-                                Special Rate
-                            </h3>
-                            <p class="phone-para">
-                               Special Rate gives customers affordable prices.
-                                It ensures great value for every ride.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="car-s">
-                        <div class="phone">
-                            <div class="phone-icon">
-                                <i class="fa-solid fa-road"></i>
-                            </div>
-                        </div>
-                        <div class="phone-text">
-                            <h3 class="phone-heading">
-                                On Way Rantel
-                            </h3>
-                            <p class="phone-para">
-                                One Way Rental allows customers to travel to their destination without returning the car to the starting point.
-                            </p>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
-                <div class="car-services2">
-                    <div class="car-s">
-                        <div class="phone">
-                            <div class="phone-icon">
-                                <i class="fa-solid fa-umbrella"></i>
-                            </div>
-                        </div>
-                        <div class="phone-text">
-                            <h3 class="phone-heading">
-                                Life Insurance
-                            </h3>
-                            <p class="phone-para">
-                               Life Insurance ensures financial protection and peace of mind for customers and their families.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="car-s">
-                        <div class="phone">
-                            <div class="phone-icon">
-                                <i class="fa-solid fa-building"></i>
-                            </div>
-                        </div>
-                        <div class="phone-text">
-                            <h3 class="phone-heading">
-                                City to City
-                            </h3>
-                            <p class="phone-para">
-                                City to City service allows customers to travel conveniently between different cities.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="car-s">
-                        <div class="phone">
-                            <div class="phone-icon">
-                                <i class="fa-solid fa-car"></i>
-                            </div>
-                        </div>
-                        <div class="phone-text">
-                            <h3 class="phone-heading">
-                                Free Rides
-                            </h3>
-                            <p class="phone-para">
-                                Free Rides offer customers complimentary trips on selected routes or occasions.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+               
             </div>
         </div>
     </section>
     <!-- cental services section end -->
-
      <!-- Numbering section start -->
     <section class="about3">
         <div class="about3-inner">
             <div class="overlay">
+                {% for n in num_show %}
                 <div class="about3-features">
                     <div class="about3-icon">
                         <div class="about3-icon1">
-                            <i class="fa-solid fa-thumbs-up"></i>
+                            <i class="{{ n.num_icon }}"></i>
                         </div>
                     </div>
                     <div class="about3-text">
-                        <h2 class="client">829+</h2>
-                        <h3 class="happy">Happy Client</h3>
+                        <h2 class="client">{{ n.num_counter }}</h2>
+                        <h3 class="happy">{{ n.num_title }}</h3>
                     </div>
                 </div>
-                <div class="about3-features">
-                    <div class="about3-icon">
-                        <div class="about3-icon1">
-                            <i class="fa-solid fa-car"></i>
-                        </div>
-                    </div>
-                    <div class="about3-text">
-                        <h2 class="client">56+</h2>
-                        <h3 class="happy">Numbers of Cars</h3>
-                    </div>
-                </div>
-                <div class="about3-features">
-                    <div class="about3-icon">
-                        <div class="about3-icon1">
-                            <i class="fa-solid fa-building"></i>
-                        </div>
-                    </div>
-                    <div class="about3-text">
-                        <h2 class="client">127+</h2>
-                        <h3 class="happy">Car Center</h3>
-                    </div>
-                </div>
-                <div class="about3-features">
-                    <div class="about3-icon">
-                        <div class="about3-icon1">
-                            <i class="fa-solid fa-clock"></i>
-                        </div>
-                    </div>
-                    <div class="about3-text">
-                        <h2 class="client">589+</h2>
-                        <h3 class="happy">Total kilometers</h3>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </section>
-     <!-- Numbering section start -->
-
-     <!-- client review start -->
+     <!-- Numbering section end -->
+    <!-- client review start -->
     <section class="client-review">
         <div class="review-top">
             <h3 class="heading-review"> Our Clients <span>Riviews</span></h3>
@@ -188,58 +79,33 @@
             first-class travel experience.</p>
         </div>
         <div class="review-bottom">
-            <div class="overlay">
+            <div class="overlay owl-carousel owl-theme " id="review">
+                {% for r in review_show %}
                 <div class="person-card">
                     <div class="card-top">
                         <div class="girl-icon">
                             <div class="girl-pic">
-                                <img src="{% static 'images/team-1.jpg' %}" alt="team-1">
+                                <img src="{{ r.review_image.url }}" alt="team-1">
                             </div>
                         </div>
                         <div class="girl-detail">
-                            <h3>Person Name</h3>
+                            <h3>{{ r.review_title}}</h3>
                             <p>Profession</p>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
+                            <i class="{{ r.review_icon }}"></i>
+                            <i class="{{ r.review_icon }}"></i>
+                            <i class="{{ r.review_icon }}"></i>
                             <span class="star">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
+                                <i class="{{ r.review_icon }}"></i>
+                                <i class="{{ r.review_icon }}"></i>
                             </span>
 
                         </div>
                     </div>
                     <div class="card-bottom">
-                        <p>The car is comfortable, well-maintained, and easy to drive.
-                            The performance is smooth, making every journey safe and enjoyable.</p>
+                        <p>{{ r.review_desc }}</p>
                     </div>
                 </div>
-                <div class="person-card">
-                    <div class="card-top">
-                        <div class="girl-icon">
-                            <div class="girl-pic">
-                                <img src="{% static 'images/team-2.jpg' %}" alt="team-1">
-                            </div>
-                        </div>
-                        <div class="girl-detail">
-                            <h3>Person Name</h3>
-                            <p>Profession</p>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-
-                            <span class="star">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </span>
-
-                        </div>
-                    </div>
-                    <div class="card-bottom">
-                        <p>The car provides a safe and comfortable ride for all passengers.
-                    Its features and performance make every trip enjoyable and hassle-free.</p>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </section>
