@@ -7,6 +7,18 @@ class Service(models.Model):
     
 # Create your models here.
 
+# creat hero form
+class HeroForm(models.Model):
+    car_type=models.CharField(max_length=200)
+    pickup_location=models.CharField(max_length=200)
+    drop_location=models.CharField(max_length=200)
+    pickup_date=models.DateField()
+    pickup_time=models.TimeField()
+    drop_date=models.DateField()
+    drop_time=models.TimeField()
+
+
+
 # Creat Numbering section
 class Numbering(models.Model): 
     num_icon=models.CharField(max_length=200)

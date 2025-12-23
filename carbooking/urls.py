@@ -32,7 +32,8 @@ urlpatterns = [
     path('cars/',views.Carspage, name="cars"), 
     path('team/',views.Teampage, name="team"), 
     path('testimonial/',views.Testimonialpage, name="testimonial"), 
-    path('page404/',views.page404page, name="page404")                                                                                                                                                                                                                                                                                                                                                                 
+    path('page404/',views.page404page, name="page404"),
+    path('success/',views.successpage, name="success")                                                                                                                                                                                                                                                                                                                                                                 
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

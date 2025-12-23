@@ -1,6 +1,6 @@
 from django.http import HttpResponse
-from django.shortcuts import render
-from car_admin.models import Service,Cat,Centalprocess,Blog,Numbering,Reviews,Centalfeatures
+from django.shortcuts import render,redirect
+from car_admin.models import Service,Cat,Centalprocess,Blog,Numbering,Reviews,Centalfeatures,HeroForm
 
 # def Homepage(request):
 #     return HttpResponse("Hello Welcome to home page")
@@ -21,6 +21,19 @@ from car_admin.models import Service,Cat,Centalprocess,Blog,Numbering,Reviews,Ce
 #     return HttpResponse("Hello Welcome to Pages page")
 
 def Homepage(request):
+    if request.method =="POST":
+        HeroForm.objects.create(
+            car_type=request.POST.get('car_type'),
+            pickup_location=request.POST.get('pickup_location'),
+            drop_location=request.POST.get('drop_location'),
+            pickup_date=request.POST.get('pickup_date'),
+            pickup_time=request.POST.get('pickup_time'),
+            drop_date=request.POST.get('drop_date'),
+            drop_time=request.POST.get('drop_time'),
+        )
+        return redirect('success')
+    
+
     serviceData=Service.objects.all()
     CatData=Cat.objects.all()
     CentalprocessData=Centalprocess.objects.all()
@@ -99,6 +112,9 @@ def Testimonialpage(request):
 
 def page404page(request):
     return render(request,"page404.html")
+
+def successpage(request):
+    return render(request,"success.html")
 
 
 
