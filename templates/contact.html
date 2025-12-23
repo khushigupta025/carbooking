@@ -80,18 +80,18 @@
 
         
                             
-                            <form class="contacts-form-con" method="POST" action="{% url 'home' %}">
+                            <form class="contacts-form-con" method="POST" action="{% url 'contact' %}">
                                  {% csrf_token %}
                                  <h3 class="msg">Send Your Message</h3>
                            
                                 
                             <div class="text-outer">
-                            <input class="input-text2" type="text" name="your name" placeholder="your name">
+                            <input class="input-text2" type="text" name="your_name" placeholder="your name">
                             <input class="input-text2" type="Email" name="email" placeholder="Your email">
                             </div>
                             <div class="text-outer">
-                            <input class="input-text2" type="text" name="your phone" placeholder="your phone">
-                            <input class="input-text2" type="text" name="your projects" placeholder="you projects">
+                            <input class="input-text2" type="text" name="your_phone" placeholder="your phone">
+                            <input class="input-text2" type="text" name="your_projects" placeholder="you projects">
                             </div>
 
                             <input class="input-text-b" type="text" name="subjects" placeholder="subjects">

@@ -66,3 +66,14 @@ class Reviews(models.Model):
     review_icon=models.CharField(max_length=200)
     review_desc=models.CharField()
    
+
+#  #creat contact form
+
+class contactsform(models.Model):
+    your_name=models.CharField(max_length=200)
+    email=models.CharField(max_length=200)
+    your_phone=models.CharField(max_length=200)
+    your_projects=models.CharField(max_length=200)
+    subjects=models.CharField(max_length=200)
+    msg=models.TextField()
+   
